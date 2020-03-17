@@ -10,7 +10,9 @@ import android.widget.CheckBox;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import utilities.Notify;
 import utilities.ParcialDos_Data;
 import utilities.ParcialDos_Model;
 
@@ -89,7 +91,12 @@ public class ParcialDos extends AppCompatActivity {
     /**
      * Califica la respuesta según la pregunta actual.
      */
-    private void calificar(){
+    private boolean calificar(){
+        if(rGroup.getCheckedRadioButtonId() == -1){
+            Notify.Show(this, "Por favor seleccione una opción para continuar.", Toast.LENGTH_SHORT);
+            return false;
+        }
+
         RadioButton rbChecked = (RadioButton)findViewById(rGroup.getCheckedRadioButtonId());
         int respuesta = Integer.parseInt(rbChecked.getTag().toString());
 
@@ -97,6 +104,8 @@ public class ParcialDos extends AppCompatActivity {
         if (preguntaActual.RespuestaCorrecta == respuesta){
             puntosObtenidos += 2;
         }
+
+        return true;
     }
 
     /**
@@ -105,15 +114,15 @@ public class ParcialDos extends AppCompatActivity {
      */
     public void btnSiguienteOnClick(View view){
         // Calificando pregunta actual:
-        calificar();
+        if(calificar()){
+            // Mostrando siguiente pregunta o resultado:
+            numeroPregunta++;
 
-        // Mostrando siguiente pregunta o resultado:
-        numeroPregunta++;
-
-        if (numeroPregunta > 5) {
-            mostrarResultado();
-        }else{
-            cambiarPregunta();
+            if (numeroPregunta > 5) {
+                mostrarResultado();
+            }else{
+                cambiarPregunta();
+            }
         }
     }
 
@@ -127,5 +136,14 @@ public class ParcialDos extends AppCompatActivity {
         intent.addCategory(Intent.CATEGORY_HOME);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
+    }
+
+    /**
+     * Método para adjuntar a evento de botón para ir al inicio.
+     * @param view Vista actual.
+     */
+    public void btnIrAlInicioOnClick(View view){
+        Intent mainActivity = new Intent(this, MainActivity.class);
+        startActivity(mainActivity);
     }
 }

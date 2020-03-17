@@ -35,4 +35,16 @@ public class MainActivity extends AppCompatActivity {
         Intent parcialDos = new Intent(this, ParcialDos.class);
         startActivity(parcialDos);
     }
+
+    /**
+     * Método para adjuntar a evento de botón para salir de la aplicación.
+     * @param view Vista actual.
+     */
+    public void btnSalirOnClick(View view){
+        finish();
+        Intent intent = new Intent(Intent.ACTION_MAIN);
+        intent.addCategory(Intent.CATEGORY_HOME);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
+    }
 }

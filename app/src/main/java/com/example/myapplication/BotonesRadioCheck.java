@@ -82,4 +82,13 @@ public class BotonesRadioCheck extends AppCompatActivity {
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
     }
+
+    /**
+     * Método para adjuntar a evento de botón para ir al inicio.
+     * @param view Vista actual.
+     */
+    public void btnIrAlInicioOnClick(View view){
+        Intent mainActivity = new Intent(this, MainActivity.class);
+        startActivity(mainActivity);
+    }
 }
