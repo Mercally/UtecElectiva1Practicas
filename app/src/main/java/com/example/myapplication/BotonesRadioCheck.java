@@ -50,7 +50,11 @@ public class BotonesRadioCheck extends AppCompatActivity {
             colorSeleccionado = "Negro";
         }
 
-        Toast.makeText(this, "El color seleccionado es: " + colorSeleccionado, Toast.LENGTH_SHORT).show();
+        if (colorSeleccionado.length() == 0){
+            Toast.makeText(this, "No ha seleccionado ningun color", Toast.LENGTH_SHORT).show();
+        }else{
+            Toast.makeText(this, "El color seleccionado es: " + colorSeleccionado, Toast.LENGTH_SHORT).show();
+        }
 
         int intCantidadSeleccionados = 0;
         String strCategoriasSeleccionadas = "";
@@ -68,7 +72,11 @@ public class BotonesRadioCheck extends AppCompatActivity {
             intCantidadSeleccionados++;
         }
 
-        Toast.makeText(this, "Categorías seleccionadas: " + strCategoriasSeleccionadas + ". (" + intCantidadSeleccionados + ") seleccionados.", Toast.LENGTH_SHORT).show();
+        if (intCantidadSeleccionados == 0) {
+            Toast.makeText(this, "No ha seleccionado ninguna categoría", Toast.LENGTH_SHORT).show();
+        }else{
+            Toast.makeText(this, "Categorías seleccionadas: " + strCategoriasSeleccionadas + ". (" + intCantidadSeleccionados + ") seleccionados.", Toast.LENGTH_SHORT).show();
+        }
     }
 
     /**

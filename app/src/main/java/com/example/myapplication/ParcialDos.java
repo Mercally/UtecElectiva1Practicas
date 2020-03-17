@@ -93,7 +93,7 @@ public class ParcialDos extends AppCompatActivity {
      */
     private boolean calificar(){
         if(rGroup.getCheckedRadioButtonId() == -1){
-            Notify.Show(this, "Por favor seleccione una opción para continuar.", Toast.LENGTH_SHORT);
+            Notify.Show(this, "Por favor seleccione una opción para continuar", Toast.LENGTH_SHORT);
             return false;
         }
 
