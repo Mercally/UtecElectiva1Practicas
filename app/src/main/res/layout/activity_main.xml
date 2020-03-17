@@ -42,7 +42,8 @@
         android:layout_marginTop="10dp"
         android:onClick="buttonParcialDos"
         android:text="Parcial 2"
-        app:layout_constraintTop_toBottomOf="@+id/buttonRadioCheck"
-        tools:layout_editor_absoluteX="162dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonRadioCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

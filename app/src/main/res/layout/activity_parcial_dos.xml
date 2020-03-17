@@ -7,9 +7,9 @@
     tools:context=".ParcialDos">
 
     <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/tvTitulo"
+        android:layout_width="376dp"
+        android:layout_height="30dp"
         android:layout_marginStart="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
@@ -22,55 +22,70 @@
         tools:text="Pregunta #" />
 
     <RadioGroup
-        android:layout_width="159dp"
-        android:layout_height="157dp"
+        android:id="@+id/radioGroup"
+        android:layout_width="368dp"
+        android:layout_height="101dp"
         android:layout_marginStart="20dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText">
+        app:layout_constraintTop_toBottomOf="@+id/tvSubtitulo">
 
         <RadioButton
-            android:id="@+id/radioButton"
+            android:id="@+id/rbOpcion1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="RadioButton" />
+            android:tag="1"
+            android:text="Opción 1" />
 
         <RadioButton
-            android:id="@+id/radioButton2"
+            android:id="@+id/rbOpcion2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="RadioButton" />
+            android:tag="2"
+            android:text="Opción 2" />
 
         <RadioButton
-            android:id="@+id/radioButton3"
+            android:id="@+id/rbOpcion3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="RadioButton" />
+            android:tag="3"
+            android:text="Opción 3" />
 
-        <RadioButton
-            android:id="@+id/radioButton4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="RadioButton" />
     </RadioGroup>
 
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="371dp"
-        android:layout_height="52dp"
+    <Button
+        android:id="@+id/btnSiguiente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:onClick="btnSiguienteOnClick"
+        android:text="Siguiente"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <Button
+        android:id="@+id/btnSalir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:onClick="btnSalirOnClick"
+        android:text="Salir"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSiguiente" />
+
+    <TextView
+        android:id="@+id/tvSubtitulo"
+        android:layout_width="366dp"
+        android:layout_height="22dp"
         android:layout_marginStart="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="10dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginRight="20dp"
-        android:autoText="false"
-        android:clickable="false"
-        android:ems="10"
-        android:gravity="start|top"
-        android:inputType="textMultiLine"
         android:text="¿Pregunta?"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:layout_constraintTop_toBottomOf="@+id/tvTitulo" />
 </androidx.constraintlayout.widget.ConstraintLayout>
