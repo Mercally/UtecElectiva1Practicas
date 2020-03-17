@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
      * Método para adjuntar a evento de botón para ir a ejercicio de radio buttons y checkbox.
      * @param view Vista actual.
      */
-    public void buttonRadioCheckOnclick(View view){
+    public void btnRadioCheckOnclick(View view){
         Intent botonesRadioCheck = new Intent(this, BotonesRadioCheck.class);
         startActivity(botonesRadioCheck);
     }
@@ -31,9 +31,18 @@ public class MainActivity extends AppCompatActivity {
      * Método para adjuntar a evento de botón para ir a parcial dos.
      * @param view Vista actual.
      */
-    public void buttonParcialDos(View view){
+    public void btnParcialDosOnClick(View view){
         Intent parcialDos = new Intent(this, ParcialDos.class);
         startActivity(parcialDos);
+    }
+
+    /**
+     * Método para adjuntar a evento de botón para ir a parcial dos.
+     * @param view Vista actual.
+     */
+    public void btnLoginOnClick(View view){
+        Intent login = new Intent(this, Login.class);
+        startActivity(login);
     }
 
     /**
