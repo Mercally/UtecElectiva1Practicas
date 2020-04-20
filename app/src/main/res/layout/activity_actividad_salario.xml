@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActividadSalario">
+
+    <TextView
+        android:id="@+id/tvNombreCompleto"
+        android:layout_width="378dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:text="Nombre: "
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <EditText
+        android:id="@+id/edEdad"
+        android:layout_width="378dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="Edad"
+        android:inputType="number"
+        app:layout_constraintTop_toBottomOf="@+id/tvNombreCompleto"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <EditText
+        android:id="@+id/etextSalario"
+        android:layout_width="375dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="Salario"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toBottomOf="@+id/edEdad"
+        tools:layout_editor_absoluteX="18dp" />
+
+    <Button
+        android:id="@+id/button10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:onClick="onClickProcesar"
+        android:text="PROCESAR"
+        app:layout_constraintTop_toBottomOf="@+id/etextSalario"
+        tools:layout_editor_absoluteX="158dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
