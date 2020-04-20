@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Login"></activity>
+        <activity android:name=".Pantalla3"></activity>
+        <activity android:name=".Pantalla2" />
+        <activity android:name=".Pantalla1" />
+        <activity android:name=".IntentMain" />
+        <activity android:name=".Login" />
         <activity android:name=".ParcialDos" />
         <activity android:name=".BotonesRadioCheck" />
         <activity android:name=".MainActivity">

@@ -33,6 +33,17 @@
         app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
 
     <Button
+        android:id="@+id/btnParcialDos2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:onClick="btnEjercicioIntents"
+        android:text="INTENTS"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
+
+    <Button
         android:id="@+id/btnSalir"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

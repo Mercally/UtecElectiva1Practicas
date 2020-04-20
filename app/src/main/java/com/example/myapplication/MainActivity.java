@@ -45,6 +45,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(login);
     }
 
+    public void btnEjercicioIntents(View view){
+        Intent login = new Intent(this, IntentMain.class);
+        startActivity(login);
+    }
+
     /**
      * Método para adjuntar a evento de botón para salir de la aplicación.
      * @param view Vista actual.
