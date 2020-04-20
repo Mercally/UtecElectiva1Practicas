@@ -46,8 +46,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void btnEjercicioIntents(View view){
-        Intent login = new Intent(this, IntentMain.class);
-        startActivity(login);
+        Intent intents = new Intent(this, IntentMain.class);
+        startActivity(intents);
+    }
+
+    public void btnEjercicioIntents2(View view){
+        Intent datos = new Intent(this, ActivityDatos.class);
+        startActivity(datos);
     }
 
     /**

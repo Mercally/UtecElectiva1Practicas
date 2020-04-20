@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityDatos">
+
+    <EditText
+        android:id="@+id/nombreCompleto"
+        android:layout_width="338dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="22dp"
+        android:ems="10"
+        android:hint="Nombre completo"
+        android:inputType="textPersonName"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="18dp" />
+
+    <EditText
+        android:id="@+id/salario"
+        android:layout_width="337dp"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:hint="Salario"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toBottomOf="@+id/nombreCompleto"
+        tools:layout_editor_absoluteX="18dp" />
+
+    <EditText
+        android:id="@+id/edad"
+        android:layout_width="340dp"
+        android:layout_height="51dp"
+        android:ems="10"
+        android:hint="Edad"
+        android:inputType="number"
+        app:layout_constraintTop_toBottomOf="@+id/salario"
+        tools:layout_editor_absoluteX="18dp" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:onClick="onClickConfirmar"
+        android:text="Enviar datos"
+        app:layout_constraintTop_toBottomOf="@+id/edad"
+        tools:layout_editor_absoluteX="127dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
