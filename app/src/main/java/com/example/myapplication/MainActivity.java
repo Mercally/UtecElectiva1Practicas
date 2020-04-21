@@ -60,6 +60,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(datos);
     }
 
+    public void btnParcial3(View view){
+        Intent parcial3 = new Intent(this, Parcial3.class);
+        startActivity(parcial3);
+    }
+
     /**
      * Método para adjuntar a evento de botón para salir de la aplicación.
      * @param view Vista actual.

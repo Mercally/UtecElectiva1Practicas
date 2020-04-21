@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Parcial3_3">
+
+    <TextView
+        android:id="@+id/textNumero1"
+        android:layout_width="373dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:text="Número 1: "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textNumero2"
+        android:layout_width="374dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:text="Número 2: "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textNumero1" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup4"
+        android:layout_width="374dp"
+        android:layout_height="134dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textNumero2">
+
+        <RadioButton
+            android:id="@+id/tbtnSumar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sumar" />
+
+        <RadioButton
+            android:id="@+id/rbtnRestar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Restar" />
+
+        <RadioButton
+            android:id="@+id/rbtnMultiplicar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Multiplicar" />
+
+        <RadioButton
+            android:id="@+id/rbtnDividir"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dividir" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/button13"
+        android:layout_width="157dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="40dp"
+        android:onClick="onClickProcesar"
+        android:text="Procesar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup4" />
+</androidx.constraintlayout.widget.ConstraintLayout>

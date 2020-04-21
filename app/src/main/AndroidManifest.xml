@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ActividadSalario"></activity>
+        <activity android:name=".Parcial3_3"></activity>
+        <activity android:name=".Parcial3_2" />
+        <activity android:name=".Parcial3" />
+        <activity android:name=".ActividadSalario" />
         <activity android:name=".ActividadNombre" />
         <activity android:name=".ActivityDatosConfirmar" />
         <activity android:name=".ActivityDatos" />
